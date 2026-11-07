@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Hero image">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb7c2"/></linearGradient></defs>
+  <rect width="1920" height="1080" fill="url(#g)"/>
+  <circle cx="1382.3999999999999" cy="324" r="129.6" fill="#ffffff" fill-opacity="0.25"/>
+  <path d="M0 842.4 L576 594 L1056 756 L1440 540 L1920 777.6 L1920 1080 L0 1080 Z" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="50%" y="52%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="76" fill="#3b3f45" fill-opacity="0.65">Hero image</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Gallery 8">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dee4"/><stop offset="1" stop-color="#aeb7c2"/></linearGradient></defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="864" cy="270" r="108" fill="#ffffff" fill-opacity="0.25"/>
+  <path d="M0 702 L360 495.00000000000006 L660 630 L900 450 L1200 648 L1200 900 L0 900 Z" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="50%" y="52%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="63" fill="#3b3f45" fill-opacity="0.65">Gallery 8</text>
+</svg>

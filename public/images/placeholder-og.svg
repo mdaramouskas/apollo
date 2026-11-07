@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Share image">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dcd7cf"/><stop offset="1" stop-color="#b5ab9d"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="864" cy="189" r="75.6" fill="#ffffff" fill-opacity="0.25"/>
+  <path d="M0 491.40000000000003 L360 346.5 L660 441 L900 315 L1200 453.59999999999997 L1200 630 L0 630 Z" fill="#ffffff" fill-opacity="0.18"/>
+  <text x="50%" y="52%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="44" fill="#3b3f45" fill-opacity="0.65">Share image</text>
+</svg>

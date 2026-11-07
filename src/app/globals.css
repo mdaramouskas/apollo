@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Semantic names are reused by every component:
+ *   cream  = page background
+ *   sand   = soft neutral (borders, fills)
+ *   stone  = secondary text
+ *   ink    = primary text
+ *   deep   = dark section background
+ *   bronze = primary accent (buttons, links)
+ *
+ * Theme presets are selected by `site.theme` in site.config.ts and applied as
+ * `<html data-theme="…">`. The @theme block holds the "default" (neutral)
+ * preset; every other preset only overrides the CSS variables below it.
+ * To add a preset: copy the [data-theme="warm"] block, rename, change values,
+ * add the key to ThemeKey in src/config/types.ts.
+ */
+@theme {
+  --color-cream: #f7f7f5;
+  --color-sand: #e3e4e1;
+  --color-stone: #6f737a;
+  --color-ink: #1c1f24;
+  --color-deep: #1f2a3a;
+  --color-bronze: #2f5d8a;
+  --color-bronze-dark: #244a6e;
+
+  --font-sans: var(--font-body-active), system-ui, sans-serif;
+  --font-display: var(--font-display-active), Georgia, serif;
+
+  /* Shape tokens: media corners and card corners */
+  --radius-media: 1rem;
+  --radius-card: 1rem;
+  --radius-button: 0.75rem;
+}
+
+:root {
+  /* Font families shipped via @fontsource-variable (imported in layout.tsx) */
+  --font-sans-primary: "Inter Variable";
+  --font-sans-secondary: "Commissioner Variable";
+  --font-serif: "EB Garamond Variable";
+
+  --font-body-active: var(--font-sans-primary);
+  --font-display-active: var(--font-sans-primary);
+}
+
+/* ── Preset "warm": terracotta / boho ─────────────────────────────────── */
+:root[data-theme="warm"] {
+  --color-cream: #f7eee1;
+  --color-sand: #e8d8c0;
+  --color-stone: #96826c;
+  --color-ink: #3b2e23;
+  --color-deep: #5c6142;
+  --color-bronze: #b65d3c;
+  --color-bronze-dark: #96482c;
+
+  --font-body-active: var(--font-sans-secondary);
+  --font-display-active: var(--font-serif);
+
+  --radius-media: 999px 999px 28px 28px;
+  --radius-card: 2.5rem;
+  --radius-button: 999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-bronze);
+  color: white;
+}
+
+/* Media shape: rounded rectangle by default, arch in the warm preset */
+.arch {
+  border-radius: var(--radius-media);
+}
+.card {
+  border-radius: var(--radius-card);
+}
+.btn {
+  border-radius: var(--radius-button);
+}
+
+/* Section kicker: small caps by default, italic serif in the warm preset */
+.kicker {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+:root[data-theme="warm"] .kicker {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Title divider: thin line by default, hand-drawn squiggle in the warm preset */
+.squiggle {
+  color: var(--color-bronze);
+}
+.ornament-line {
+  display: block;
+}
+.ornament-squiggle {
+  display: none;
+}
+:root[data-theme="warm"] .ornament-line {
+  display: none;
+}
+:root[data-theme="warm"] .ornament-squiggle {
+  display: block;
+}
+
+/* Heading weight: sans headings are semibold, serif headings regular */
+.font-display {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+:root[data-theme="warm"] .font-display {
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bronze);
+}
+
+/* Skip link (UI-14) */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-ink);
+  color: white;
+  border-radius: 0.5rem;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-bronze);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
