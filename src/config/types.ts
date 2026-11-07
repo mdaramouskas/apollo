@@ -2,7 +2,7 @@ import type { Lang } from "@/i18n";
 import type { ModuleId } from "./modules";
 
 export type Plan = "basic" | "start" | "plus" | "pro";
-export type ThemeKey = "default" | "warm";
+export type ThemeKey = "default" | "warm" | "classic";
 
 /** Short text in every supported locale. */
 export type Localized = Record<Lang, string>;

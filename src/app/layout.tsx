@@ -21,6 +21,7 @@ import "./globals.css";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/commissioner";
 import "@fontsource-variable/eb-garamond";
+import "@fontsource/gfs-didot"; // 400 — covers latin + greek subsets
 
 const lang = site.locales.default;
 const title = `${site.brand.name} — ${site.brand.tagline[lang]}`;

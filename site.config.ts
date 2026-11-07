@@ -37,7 +37,7 @@ export const site: SiteConfig = {
   locales: { default: "en", supported: ["en", "el"] },
 
   // Theme preset: "default" (neutral) | "warm" (terracotta/boho). Tokens in src/app/globals.css.
-  theme: "warm",
+  theme: "classic",
 
   // Overrides on top of plan defaults, keyed by module id.
   features: {
